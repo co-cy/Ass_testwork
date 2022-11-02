@@ -34,5 +34,8 @@
 - асинхронные вызовы.
 
 ## Как запустить ?
-1) ```pip install -r requirements.txt```
-2) ```uvicorn app:app```
+Необходим python 3.11+
+1) Установить пакеты: `pip install -r requirements.txt`
+2) В файле конфигурации указать данные базы данных `serverConfig.py`
+3) Настроить файл конфигурации под себя: `serverConfig.py`
+4) Запустить сервер: `uvicorn server:app`

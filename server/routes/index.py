@@ -1,8 +1,13 @@
+from pydantic import BaseModel
 from fastapi import APIRouter
 
 router = APIRouter()
 
 
-@router.get("/")
-def index():
-    return "main page"
+class SearchString(BaseModel):
+    string: str
+
+
+@router.post("/")
+def index(search_string: SearchString):
+    return search_string.string
