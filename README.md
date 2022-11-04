@@ -34,8 +34,13 @@
 - асинхронные вызовы.
 
 ## Как запустить ?
-Необходим python 3.11+
-1) Установить пакеты: `pip install -r requirements.txt`
-2) В файле конфигурации указать данные базы данных `serverConfig.py`
-3) Настроить файл конфигурации под себя: `serverConfig.py`
-4) Запустить сервер: `uvicorn server:app`
+1) Установить docker-compose
+2) Поправить `docker-compose.yml` дописав в него ссылку на elasticsearth (где свободен индекс document)
+3) Выполнить `sudo docker-compose build`
+4) Выполнить `sudo docker-compose up` (-d) # если надо кинуть в фоновый режим
+5) Перейти на сайт "http://localhost:7878"
+
+## Интерактивная документация 
+- Спецификация openApi в файле docs.json
+- Интерактивная документация Swagger UI по ссылке http://localhost:7878/docs
+- Интерактивная документация ReDoc по ссылке http://localhost:7878/redoc
